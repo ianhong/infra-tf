@@ -1,12 +1,22 @@
-#.github/dependabot.yml
 version: 2
 updates:
   - package-ecosystem: "terraform"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "cron"
+      cronjob: "0 9 * * *"
+      timezone: "America/Los_Angeles"
     
-    # Optional: Groups updates to keep things clean
+    # -----------------------------------------------------------
+    # STABILITY POLICY: NO MAJOR UPDATES
+    # -----------------------------------------------------------
+    ignore:
+      - dependency-name: "*" # Apply to ALL modules/providers
+        update-types:
+          - "version-update:semver-major"
+
+    open-pull-requests-limit: 10
+    
     groups:
        terraform-modules:
           patterns:

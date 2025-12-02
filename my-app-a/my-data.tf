@@ -1,4 +1,4 @@
-module "my_app_a_bucket_b" {
+module "my_app_a_data_b" {
   source = "github.com/ianhong/tf-module-b.git?ref=v1.1.0"
 
   project_id = "my-gcp-project-id"

@@ -5,5 +5,3 @@ module "my_app_b_bucket_a" {
   name       = "my-test-bucket-12345" # Must be globally unique
   location   = "us-central1"
 }
-
-

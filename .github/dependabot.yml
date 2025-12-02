@@ -4,10 +4,17 @@ updates:
   - package-ecosystem: "terraform"
     directory: "/"
     schedule:
-      interval: "daily"
-    
+      interval: "cron"
+      cron: "0 9 * * *"
+    open-pull-requests-limit: 10
+    registries:
+      - github-private-modules
     # Optional: Groups updates to keep things clean
     groups:
        terraform-modules:
           patterns:
             - "*"
+registries:
+  github-private-modules:
+    type: git
+    url: "https://github.com/ianhong/core-tf.git"

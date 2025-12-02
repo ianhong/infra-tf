@@ -9,7 +9,7 @@ updates:
     schedule:
       interval: "cron"
       # Syntax: Minute Hour DayOfMonth Month DayOfWeek
-      cron: "0 9 * * *"
+      cronjob: "0 9 * * *"
       # ALWAYS set a timezone. Default is UTC, which might be 2am for you.
       timezone: "America/Los_Angeles"
 
